@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> KARADENİZ Oyuncak </title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+<style>
+  .about_section {
+    background-color: #8ccc65; /* veya istediğiniz başka bir renk kodu veya arka plan görselini buraya ekleyebilirsiniz */
+    background-repeat: no-repeat; /* Arka plan resminin tekrar etmemesi için */
+    background-size: cover; /* Arka plan resminin sayfanın tamamını kaplayacak şekilde genişlemesi için */ 
+  }
+
+  #chart-container {
+    width: 500px; /* Grafiğin genişliğini ayarlar */
+    height: 500px; /* Grafiğin yüksekliğini ayarlar */
+    margin: 0 auto; /* Ortalamak için opsiyonel */
+  }
+
+  #pieChart {
+    max-width: 100%; /* Responsive kalması için */
+    max-height: 100%;
+  }
+
+
+  </style>
+<body class="sub_page">
+
+  <div class="hero_area">
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              KARADENİZ Oyuncak
+            </span>
+          </a>
+    
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">ANA SAYFA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> HAKKIMIZDA</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  ÜRÜNLERİMİZ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+                  <a class="dropdown-item" href="newborn.html">Yenidoğan Çocuk</a>
+                  <a class="dropdown-item" href="toddler.html">Yetişkin Çocuk</a>
+                  <a class="dropdown-item" href="shop.html">Tüm Ürünlerimiz</a>
+                </div>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">İLETİŞİM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html"><i class="fa fa-user" aria-hidden="true"></i> GİRİŞ</a>
+              </li>
+              <form class="form-inline">
+                <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container-fluid  ">
+      <div class="row">
+        <div class="col-md-6 pl-md-0">
+          <div class="img-box">
+            <img src="images/toys4.png" alt="">
+          </div><br><br><br><br>
+          <div class="img-box2">
+            <h2><strong>İllere Göre Yüzdelik Sipariş Dağılım Grafiğimiz</strong></h2>
+            <div id="chart-container">
+              <canvas id="pieChart"></canvas>
+          </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="detail-box">
+            <div class="heading_container ">
+              <h2>
+                Hakkımızda <span></span>
+              </h2>
+            </div>
+            <p>
+              KARADENİZ Oyuncak Mağazamıza Hoşgeldiniz!<br>
+
+              Biz, KARADENİZ Oyuncak olarak, çocukların yaratıcılığını desteklemek ve oyun oynarken öğrenmelerine olanak sağlamak amacıyla yıllardır oyuncak sektöründe güvenle hizmet vermekteyiz. Misyonumuz, eğlenceli, kaliteli ve güvenli oyuncaklarla çocukların mutluluğunu ve gelişimini desteklemektir.
+              <br><br>
+              <span style="color: #000000; font-size: 25px;"> <b>Bizim Ayrıcalığımız</b> </span><br>
+              Tecrübeli ve yaratıcı ekibimizle her zaman yenilikçi, güvenilir ve müşteri odaklı bir hizmet anlayışını benimsiyoruz. KARADENİZ Oyuncak olarak, sadece oyuncak değil, çocukların hayal dünyalarını şekillendirecek özel ürünler sunuyoruz.
+              <br><br>
+              <span style="color: #000000; font-size: 25px;"> <b>Çeşitlilikte Lider</b> </span><br>
+              Her yaş grubuna hitap eden zengin bir ürün koleksiyonuna sahibiz. Bebeklerden gençlere kadar herkesin ilgisini çekebilecek öğretici ve eğlenceli oyuncaklar sunuyoruz. Çocuklarınızın eğlenerek öğrenmelerine katkıda bulunmak bizim önceliğimizdir.
+              <br><br>
+              <span style="color: #000000; font-size: 25px;"> <b>Güven ve Kalite</b> </span><br>
+              KARADENİZ Oyuncak olarak, sadece eğitici ve yaratıcı ürünler sunmakla kalmıyor, aynı zamanda güvenli bir alışveriş deneyimi sağlamaya da özen gösteriyoruz. Ürünlerimiz, uluslararası güvenlik standartlarına uygun olarak üretilmiştir.
+              <br><br>
+              <span style="color: #000000; font-size: 25px;"> <b>Birlikte Geleceğe</b> </span><br>
+              Siz değerli müşterilerimizin güveniyle büyümekten ve çocuklarınızın gelişimine katkı sağlamaktan gurur duyuyoruz. KARADENİZ Oyuncak olarak, çocuklarınızın dünyasını renklendirmek ve onların geleceğine umutla ışık tutmak için buradayız.
+              <br><br>
+              KARADENİZ Oyuncak ailesi olarak sizi ve sevdiklerinizi eğlenceli, güvenli ve öğretici bir yolculuğa davet ediyoruz. Bizi tercih ettiğiniz için teşekkür ederiz.
+              <br><br><br>
+              <b>KARADENİZ Oyuncak Ekibi</b>
+            </p>
+
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="https://www.google.com/maps/place/%C4%B0zmit,+Kocaeli/@40.771114,29.934501,13z/data=!3m1!4b1!4m6!3m5!1s0x14cb4f66644bfb9d:0x82690ee7586b7eb9!8m2!3d40.7654408!4d29.9408089!16zL20vMDF4XzM2?entry=ttu">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Kocaeli/İZMİT
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Tel: +90 262 555 55 55
+                </span>
+              </a>
+              <a href="https://mail.google.com/">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  karadenizoyuncak@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="https://tr-tr.facebook.com/">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+              Info
+            </h4>
+            <p>
+              KARADENİZ Oyuncak LTD. ŞTİ. <br>
+              Tüm hakları saklıdır.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Kısayollar
+            </h4>
+            <div class="info_links">
+              <a class="active" href="index.html">
+                Ana Sayfa
+              </a>
+              <a class="" href="about.html">
+                Hakkımızda
+              </a>
+              <a class="" href="shop.html">
+                Tüm Ürünlerimiz
+              </a>
+              <a class="" href="contact.html">
+                İletişim
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Üyelik
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="E-mail giriniz." />
+            <button type="submit">
+              Üyelik
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> By
+        <a href="https://github.com/erdemkaradenz">Erdem KARADENİZ</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+  
+  <script>
+    // Canvas elemanını seç
+    const ctx = document.getElementById('pieChart').getContext('2d');
+
+    // Veri seti ve ayarlar
+    const data = {
+        labels: ['Kocaeli', 'Ankara', 'İzmir', 'Trabzon', 'İstanbul'],
+        datasets: [{
+            label: 'Sipariş Dağılımı',
+            data: [40, 25, 15, 10, 10], // Değerler (%)
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.7)', // Renkler
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(153, 102, 255, 0.7)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    const config = {
+        type: 'pie', // Pasta grafiği
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            let value = context.raw || 0;
+                            return `${label}: ${value}%`;
+                        }
+                    }
+                }
+            },
+            animation: {
+                animateRotate: true, // Dönerken animasyon
+                animateScale: true  // Ölçeklenirken animasyon
+            }
+        }
+    };
+
+    // Chart.js ile grafiği oluştur
+    const pieChart = new Chart(ctx, config);
+</script>
+
+</body>
+
+</html>

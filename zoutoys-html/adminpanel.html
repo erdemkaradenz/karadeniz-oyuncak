@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .admin-header {
+      background-color: #8363BF;
+      color: black;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .admin-header h1 {
+      margin: 0;
+    }
+
+    .admin-header .brand-name {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .sidebar {
+      background-color: #8363BF;
+      height: 100vh;
+      padding: 20px;
+      color: white;
+      position: relative;
+    }
+
+    .sidebar .welcome-message {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background-color: #6b4a96;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .chart-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="admin-header">
+    
+    <h1>Admin Panel</h1>
+  </div> 
+
+
+  <div class="d-flex">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <br> 
+      <a href="#">Dashboard</a>
+      <a href="#">Siparişler</a>
+      <a href="#">Kullanıcı Yönetimi</a>
+      <a href="#">Ürünler</a>
+      <a href="#">Ayarlar</a>
+      <a href="#">Çıkış</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h2>Yüzdelik İl Satış Grafiği</h2>
+      <div class="chart-container">
+        <canvas id="pieChart"></canvas>
+      </div>
+
+      <h2>Kullanıcı Yaş Grafiği</h2>
+      <div class="chart-container">
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Yüzdelik İl Satış Grafiği
+    const pieCtx = document.getElementById('pieChart').getContext('2d');
+    const pieData = {
+      labels: ['Kocaeli', 'Ankara', 'İzmir', 'Trabzon', 'İstanbul'],
+      datasets: [{
+        label: 'Sipariş Dağılımı',
+        data: [15, 25, 20, 10, 30],
+        backgroundColor: ['#007bff', '#ffc107', '#28a745', '#17a2b8', '#dc3545'],
+        hoverOffset: 4
+      }]
+    };
+    const pieChart = new Chart(pieCtx, {
+      type: 'pie',
+      data: pieData,
+    });
+
+    // Kullanıcı Yaş Grafiği
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    const barData = {
+      labels: ['18-25 Yaş', '26-33 Yaş', '34-41 Yaş', '42-49 Yaş', '49+ Yaş'],
+      datasets: [{
+        label: 'Kullanıcı Yaş Dağılımı',
+        data: [40, 70, 50, 30, 10], // Örnek veriler
+        backgroundColor: ['#007bff', '#ffc107', '#28a745', '#17a2b8', '#dc3545'],
+        borderColor: '#343a40',
+        borderWidth: 1
+      }]
+    };
+    const barChart = new Chart(barCtx, {
+      type: 'bar',
+      data: barData,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
+
